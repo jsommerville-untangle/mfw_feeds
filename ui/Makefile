@@ -16,9 +16,11 @@ define Package/ui
   TITLE:=MFW new admin interface
   URL:=https://github.com/untangle/mfw_ui
   
-  HOST_BUILD_DEPENDS:=+node/host +node-yarn/host
+  HOST_BUILD_DEPENDS:=node/host node-yarn/host
+  HOST_BUILD_PARALLEL:=1
 
-  PKG_BUILD_DEPENDS:=wget +node/host +node-yarn/host
+  PKG_BUILD_DEPENDS:=wget node/host node-yarn/host
+  PKG_BUILD_PARALLEL:=1
 
 endef
 
